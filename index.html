@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Gerador de senhas, gerador password" >
+    <link rel="stylesheet" href="style.css">
+    <title>Gerador de senha</title>
+   </head> 
+  
+    <body>
+        <img class="logo" src="logo4.png" alt="Gerador de senha logo" />
+
+        <main class="container-input">
+            <span>Tamanho <span id="valor"></span> caracteres</span>
+            <input id="slider" class="slider" type="range" min="5" max="25" value="15"/>
+
+                <div class="radio-btn" >
+                    <input type="radio" id="maiuscula" name="pass_type" value="maiuscula">
+                    <label for="maiuscula">Maiúscula</label>
+                            
+                    <input type="radio" id="minuscula" name="pass_type" value="minuscula">
+                    <label for="minuscula">Minúscula</label>
+                            
+                    <input type="radio" id="numerica" name="pass_type" value="numerica">
+                    <label for="numerica">Numérica</label>
+
+                    <input type="radio" id="default" name="pass_type" value="default">
+                    <label for="default">Todos</label>
+
+                
+                </div>  
+                <button id="button" class="button-cta" onclick="gerenatePassword()">Gerar senha</button>
+
+        </main>
+        
+        <div id="container-password" class="container-password hide" onclick="copyPassword()">
+            <span class="title">Sua senha gerada foi 👇:</span>
+            <span id="password" class="password">123123123123</span>
+            <span class="tooltip">Clique na senha para copiar.</span>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+    
+    <footer>
+        <p class='footer'>Developed by Raphax</p>
+    </footer>
+
+</html>
